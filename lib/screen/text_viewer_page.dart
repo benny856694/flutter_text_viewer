@@ -81,19 +81,22 @@ class _TextViewerPageState extends State<TextViewerPage> {
                     _getSearchResultCount(),
                   ],
                   Expanded(
-                    child: SingleChildScrollView(
-                      controller: scrollController,
-                      child: TextContent(
-                        text: snapshot.data!,
-                        highlightText:
-                            searchValue.isNotEmpty ? searchValue : null,
-                        highlightColor: widget.textViewer.highLightColor,
-                        focusColor: widget.textViewer.highLightColor,
-                        ignoreCase: widget.textViewer.ignoreCase,
-                        highlightStyle: widget.textViewer.highLightTextStyle,
-                        focusStyle: widget.textViewer.focusTextStyle,
-                        keys: _keys,
-                        focusKeyIndex: _focusKeyIndex,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SingleChildScrollView(
+                        controller: scrollController,
+                        child: TextContent(
+                          text: snapshot.data!,
+                          highlightText:
+                              searchValue.isNotEmpty ? searchValue : null,
+                          highlightColor: widget.textViewer.highLightColor,
+                          focusColor: widget.textViewer.highLightColor,
+                          ignoreCase: widget.textViewer.ignoreCase,
+                          highlightStyle: widget.textViewer.highLightTextStyle,
+                          focusStyle: widget.textViewer.focusTextStyle,
+                          keys: _keys,
+                          focusKeyIndex: _focusKeyIndex,
+                        ),
                       ),
                     ),
                   ),
