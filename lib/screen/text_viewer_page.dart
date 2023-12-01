@@ -81,8 +81,9 @@ class _TextViewerPageState extends State<TextViewerPage> {
                     _getSearchResultCount(),
                   ],
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
                       child: SingleChildScrollView(
                         controller: scrollController,
                         child: TextContent(
